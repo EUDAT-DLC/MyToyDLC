@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(../fonts/Raleway.woff2) format('woff2'), url(../fonts/Raleway.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(../fonts/Raleway_medium.woff2) format('woff2'), url(../fonts/Raleway_medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(../fonts/Raleway_semibold.woff2) format('woff2'), url(../fonts/Raleway_semibold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(../fonts/Raleway_bold.woff2) format('woff2'), url(../fonts/Raleway_bold.woff) format('woff');
+}
+
+/*** STRUCTURE LAYOUT ***/
+html,body{height:100%;margin:0; color: #333;font-family: 'Raleway', sans-serif;}
+#header-top {background: #F45D00;padding: 5px 0;}
+#header-top a {color: #FFFFFF;}
+#header {padding: 1% 0;background: #FFFFFF url("../images/img_header.png") no-repeat top right;}
+footer {background: #F7F3E9 url("../images/color-line.jpg") repeat-x top left;padding: 20px 10px 0px 10px;font-size: 12px;}
+
+/*** GENERAL STYLE ELEMENTS ***/
+h1 {font-weight: 600;}
+a {color: #F45D00;text-decoration: none;}
+a:hover {text-decoration: none;}
+
+/**** NAVBAR ***/
+.navbar-default {background-color: transparent !important;border: 0 !important; /*margin-top: 30px;*/}
+.navbar-default .navbar-nav > li > a {color: #333333;font-weight: 500;font-size: 16px;}
+.navbar-default .navbar-nav > li > a:hover {color: #F45D00;font-weight: 500;font-size: 16px;}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {border:0;}
+.navbar-form {float: none !important;}
+.navbar-footer {background-color: transparent !important;border: 0 !important;}
+.navbar-footer ul li a {background-color: transparent !important;color: #666; }
+.navbar-footer ul li a:hover {color: #333;}
+
+#searchform-input-group {padding: 8px 0;}
+#search-box-main .navbar {margin: 20px 0;}
+
+/*** OLD CSS STYLE ***/
+.right-not-rounded {border-bottom-right-radius: 0;border-top-right-radius: 0;}
+.left-not-rounded {border-bottom-left-radius: 0;border-top-left-radius: 0;}
+.no-padding {padding: 0;}
+
+
+
+
+
+
+
+
+
+.dropzone {
+  min-height: 150px;
+  border: 2px dashed #0087F7;
+  border-radius: 5px;
+  background: white;
+  background: white;
+  padding: 54px 54px;
+}
+
+.dropzone, .dropzone * {
+  box-sizing: border-box;
+}
+
+.dropzone .dz-message {
+  font-weight: 400;
+  text-align: center;
+  margin: 2em 0;
+}
+
+.dropzone.dz-clickable * {
+  cursor: default;
+}
+
+.dropzone, .dropzone * {
+  box-sizing: border-box;
+}

@@ -5,94 +5,152 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <title>My Toy DLC</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-sham.js"></script>
+    <![endif]-->
+
+    <style>
+        html,
+        body {
+            margin:0;
+            padding:0;
+            height:100%;
+        }
+        #main-container {
+            min-height:100%;
+            position:relative;
+        }
+        #body {
+            padding-bottom:70px;   /* Height of the footer */
+        }
+        #footer {
+            position:absolute;
+            bottom:0;
+            width:100%;
+            height:70px;   /* Height of the footer */
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="page-header">
-            <h1>
-                My Toy DLC <span>Playground</span>
-            </h1>
-        </div>
+    <noscript>
+    <div>The GEF requires JavaScript to be enabled!</div>
+    </noscript>
 
-        <div class="row clearfix">
-            <div class="col-md-12 column">
+    <div id="main-container">
+        <div id="body" class="container">
+            <div class="page-header">
+                <h1>
+                    My Toy DLC <span>Playground</span>
+                </h1>
+            </div>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            Upload files to B2DROP
-                        </h3>
+            <div class="row clearfix">
+                <div class="col-md-3 column">
+                    <div class="nav-collapse sidebar-nav">
+                        <ul class="nav nav-tabs nav-stacked main-menu">
+                            <li><a href="#">
+                                <i class="icon-dashboard"></i>
+                                <span class="hidden-tablet"> Home</span></a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="btn btn-default dropdown-toggle" type="button" style="text-align:left"
+                                        id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                    New Action <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li><a class="submenu" href="#">
+                                        <i class="icon-file-alt"></i>
+                                        <span class="hidden-tablet"> Upload files to B2DROP</span></a>
+                                    </li>
+                                    <li><a class="submenu" href="#">
+                                        <i class="icon-file-alt"></i>
+                                        <span class="hidden-tablet"> Call an external service</span></a>
+                                    </li>
+                                    <li><a class="submenu" href="#">
+                                        <i class="icon-file-alt"></i>
+                                        <span class="hidden-tablet"> Annotate B2DROP files</span></a>
+                                    </li>
+                                    <li><a class="submenu" href="#">
+                                        <i class="icon-file-alt"></i>
+                                        <span class="hidden-tablet"> Push to B2SHARE</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="panel-body">
-                        <div>
-                            <form class="dropzone dz-clickable">
-                              <div class="dz-message">
-                                Drop files here or click to upload files to B2DROP.<br>
-                              </div>
-                            </form>
+                </div>
+
+
+                <div class="col-md-9 column">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Upload files to B2DROP
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <form class="dropzone dz-clickable" action="/">
+                                  <div class="dz-message">
+                                    Drop files here or click to upload files to B2DROP.<br>
+                                  </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <hr/>
+                    <hr/>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            Call an external web service on B2DROP files
-                        </h3>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Call an external web service on B2DROP files
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                        </div>
                     </div>
-                    <div class="panel-body">
-                    </div>
-                </div>
-                <hr/>
+                    <hr/>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            Annotate B2DROP files
-                        </h3>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Annotate B2DROP files
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                        </div>
                     </div>
-                    <div class="panel-body">
-                    </div>
-                </div>
-                <hr/>
+                    <hr/>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            Push B2DROP files to B2SHARE
-                        </h3>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Push B2DROP files to B2SHARE
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                        </div>
                     </div>
-                    <div class="panel-body">
-                    </div>
-                </div>
-                <hr/>
-
-                <div class="btn-group">
-                    <button class="btn btn-default">SelectAction</button>
-                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">Upload files to B2DROP</a>
-                        </li>
-                        <li>
-                            <a href="#">Call external web service on B2DROP files</a>
-                        </li>
-                        <li>
-                            <a href="#">Annotate B2DROP files</a>
-                        </li>
-                        <li>
-                            <a href="#">Push B2DROP files to B2SHARE</a>
-                        </li>
-                    </ul>
+                    <hr/>
                 </div>
             </div>
         </div>
+        </div>
+
+
+        <footer id="footer"> </footer>
     </div>
-<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
-<script src="{{ url_for('static', filename='dropzone.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/dropzone.js') }}"></script>
 </body>
+</html>
