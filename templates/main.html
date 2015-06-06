@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My Toy DLC</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                My Toy DLC <span>Playground</span>
+            </h1>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Upload files to B2DROP
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div>
+                            <form class="dropzone dz-clickable">
+                              <div class="dz-message">
+                                Drop files here or click to upload files to B2DROP.<br>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Call an external web service on B2DROP files
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                    </div>
+                </div>
+                <hr/>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Annotate B2DROP files
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                    </div>
+                </div>
+                <hr/>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Push B2DROP files to B2SHARE
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                    </div>
+                </div>
+                <hr/>
+
+                <div class="btn-group">
+                    <button class="btn btn-default">SelectAction</button>
+                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Upload files to B2DROP</a>
+                        </li>
+                        <li>
+                            <a href="#">Call external web service on B2DROP files</a>
+                        </li>
+                        <li>
+                            <a href="#">Annotate B2DROP files</a>
+                        </li>
+                        <li>
+                            <a href="#">Push B2DROP files to B2SHARE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='dropzone.js') }}"></script>
+</body>
