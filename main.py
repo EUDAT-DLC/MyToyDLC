@@ -20,8 +20,6 @@ if __name__ == "__main__":
     app.run()
 
 
-# workflow-like web interface
-# drag and drop file zone
 # b2drop: manipulate files
 # select services to be used
 #     shuffling, b2note

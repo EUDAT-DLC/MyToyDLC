@@ -39,20 +39,18 @@
 </head>
 
 <body>
-    <noscript>
-    <div>The GEF requires JavaScript to be enabled!</div>
-    </noscript>
-
     <div id="main-container">
-        <div id="body" class="container">
-            <div class="page-header">
-                <h1>
+        <div id="body">
+            <div class="page-header" id="header" style='margin-top:0'>
+                <h1 style='margin-top:0; padding:20px; height:70px'>
                     My Toy DLC <span>Playground</span>
                 </h1>
             </div>
 
+            <div class="container">
             <div class="row clearfix">
-                <div class="col-md-3 column">
+
+                <div class="col-md-2 column">
                     <div class="nav-collapse sidebar-nav">
                         <ul class="nav nav-tabs nav-stacked main-menu">
                             <li><a href="#">
@@ -62,7 +60,7 @@
                             <li class="dropdown">
                                 <a class="btn btn-default dropdown-toggle" type="button" style="text-align:left"
                                         id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                    New Action <span class="caret"></span>
+                                    New Action&nbsp;<span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                                     <li><a class="submenu" href="#">
@@ -88,7 +86,7 @@
                 </div>
 
 
-                <div class="col-md-9 column">
+                <div class="col-md-10 column">
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -97,16 +95,28 @@
                             </h3>
                         </div>
                         <div class="panel-body">
-                            <div>
-                                <form class="dropzone dz-clickable" action="/">
-                                  <div class="dz-message">
-                                    Drop files here or click to upload files to B2DROP.<br>
-                                  </div>
-                                </form>
+                            <div class="row clearfix">
+                                <div class="col-md-6">
+                                    <form class="dropzone dz-clickable" action="/">
+                                      <div class="dz-message">
+                                        Drop files here or click to upload files to B2DROP.<br>
+                                      </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="b2drop_ex2">B2DROP files:</label>
+                                            <select class="form-control" id="b2drop_ex2" size="9">
+                                                <option value="file1">File1</option>
+                                                <option value="file2">File2</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <hr/>
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -115,9 +125,32 @@
                             </h3>
                         </div>
                         <div class="panel-body">
+                            <div class="row clearfix">
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="ex1">Select a service:</label>
+                                            <select class="form-control" id="ex1" size="9">
+                                                <option value="shuffler">Shuffler</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="b2drop_ex2">Select a B2DROP file:</label>
+                                            <select class="form-control" id="b2drop_ex2" size="9">
+                                                <option value="file1">File1</option>
+                                                <option value="file2">File2</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <hr/>
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -128,7 +161,6 @@
                         <div class="panel-body">
                         </div>
                     </div>
-                    <hr/>
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -139,18 +171,22 @@
                         <div class="panel-body">
                         </div>
                     </div>
-                    <hr/>
                 </div>
+
+            </div>
             </div>
         </div>
-        </div>
 
-
-        <footer id="footer"> </footer>
+        <footer id="footer">
+        </footer>
     </div>
 
-<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/dropzone.js') }}"></script>
+    <noscript>
+    <div>The GEF requires JavaScript to be enabled!</div>
+    </noscript>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dropzone.js') }}"></script>
 </body>
 </html>
