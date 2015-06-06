@@ -79,6 +79,10 @@
                                         <i class="icon-file-alt"></i>
                                         <span class="hidden-tablet"> Push to B2SHARE</span></a>
                                     </li>
+                                    <li><a class="submenu" href="#">
+                                        <i class="icon-file-alt"></i>
+                                        <span class="hidden-tablet"> View provenance data</span></a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -87,90 +91,71 @@
 
 
                 <div class="col-md-10 column">
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                Upload files to B2DROP
-                            </h3>
+                    <h3> Upload files to B2DROP </h3>
+                    <div class="row clearfix">
+                        <div class="col-md-6">
+                            <form>
+                                <div class="form-group">
+                                    <label for="b2drop_ex2">B2DROP files:</label>
+                                    <select class="form-control" id="b2drop_ex2" size="15">
+                                        <option value="folder"><span class="glyphicon glyphicon-folder-open"></span>Folder</option>
+                                        <option value="file"><span class="glyphicon glyphicon-file"></span>File</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <form class="dropzone dz-clickable" action="/">
+                              <div class="dz-message">
+                                Drop files here or click to upload files to B2DROP.<br>
+                              </div>
+                            </form>
                         </div>
-                        <div class="panel-body">
-                            <div class="row clearfix">
-                                <div class="col-md-6">
-                                    <form class="dropzone dz-clickable" action="/">
-                                      <div class="dz-message">
-                                        Drop files here or click to upload files to B2DROP.<br>
-                                      </div>
-                                    </form>
-                                </div>
-                                <div class="col-md-6">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="b2drop_ex2">B2DROP files:</label>
-                                            <select class="form-control" id="b2drop_ex2" size="9">
-                                                <option value="file1">File1</option>
-                                                <option value="file2">File2</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                        <div class="col-md-6">
+                            <label>File location:</label>
+                            <div class="map-canvas"></div>
                         </div>
                     </div>
+                    <hr/>
 
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                Call an external web service on B2DROP files
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="row clearfix">
-                                <div class="col-md-6">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="ex1">Select a service:</label>
-                                            <select class="form-control" id="ex1" size="9">
-                                                <option value="shuffler">Shuffler</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                        </div>
-                                    </form>
+                    <h3> Call an external web service on B2DROP files </h3>
+                    <div class="row clearfix">
+                        <div class="col-md-6">
+                            <form>
+                                <div class="form-group">
+                                    <label for="ex1">Select a service:</label>
+                                    <select class="form-control" id="ex1" size="9">
+                                        <option value="shuffler">Shuffler</option>
+                                        <option value="other">Other</option>
+                                    </select>
                                 </div>
-                                <div class="col-md-6">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="b2drop_ex2">Select a B2DROP file:</label>
-                                            <select class="form-control" id="b2drop_ex2" size="9">
-                                                <option value="file1">File1</option>
-                                                <option value="file2">File2</option>
-                                            </select>
-                                        </div>
-                                    </form>
+                            </form>
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="b2drop_ex2">Select a B2DROP file:</label>
+                                    <select class="form-control" id="b2drop_ex2" size="12">
+                                        <option value="file1">File1</option>
+                                        <option value="file2">File2</option>
+                                    </select>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </form>
 
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                Annotate B2DROP files
-                            </h3>
+                            <button type="button" class="btn btn-primary btn-block">Execute</button>
                         </div>
-                        <div class="panel-body">
+                        <div class="col-md-6">
+                            <label>Service and file location:</label>
+                            <div class="map-canvas"></div>
                         </div>
                     </div>
+                    <hr/>
 
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                Push B2DROP files to B2SHARE
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                        </div>
-                    </div>
+                    <h3> Annotate B2DROP files </h3>
+                    <hr/>
+
+                    <h3> Push B2DROP files to B2SHARE </h3>
+                    <hr/>
+
+                    <h3> View provenance data </h3>
+                    <hr/>
                 </div>
 
             </div>
@@ -188,5 +173,19 @@
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/dropzone.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(50, 10),
+          zoom: 3,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        $('.map-canvas').each(function(i, x){
+            var map = new google.maps.Map(x, mapOptions)
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </body>
 </html>
